@@ -2,7 +2,7 @@ apiVersion: apis.kcp.io/v1alpha1
 kind: APIResourceSchema
 metadata:
   creationTimestamp: null
-  name: v230202-48018cd6.synctargets.workload.kcp.io
+  name: v230202-92981f91.synctargets.workload.kcp.io
 spec:
   group: workload.kcp.io
   names:
@@ -23,7 +23,7 @@ spec:
       name: Ready
       priority: 2
       type: string
-    - jsonPath: .status.syncedResources[*].resource
+    - jsonPath: '{.status.syncedResources[*].resource}'
       name: Synced API resources
       priority: 3
       type: string
