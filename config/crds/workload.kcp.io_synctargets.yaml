@@ -25,7 +25,7 @@ spec:
       name: Ready
       priority: 2
       type: string
-    - jsonPath: .status.syncedResources
+    - jsonPath: '{range .status.syncedResources[*]}{.resource}{''\n''}{end}'
       name: Synced API resources
       priority: 3
       type: string
